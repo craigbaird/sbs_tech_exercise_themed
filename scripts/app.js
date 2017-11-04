@@ -53,59 +53,59 @@ function getRequesterFormData() {
 }
 
 function getGridFormData() {
-  gridDataObject.item1 = $('#A1').val();
-  gridDataObject.item2 = $('#B1').val();
-  gridDataObject.item3 = $('#C1').val();
-  gridDataObject.item4 = $('#D1').val();
-  gridDataObject.item5 = $('#E1').val();
+  gridDataObject.item1 = $('#A1').text();
+  gridDataObject.item2 = $('#B1').text();
+  gridDataObject.item3 = $('#C1').text();
+  gridDataObject.item4 = $('#D1').text();
+  gridDataObject.item5 = $('#E1').text();
 
-  gridDataObject.count1 = $('#A2').val();
-  gridDataObject.count2 = $('#B2').val();
-  gridDataObject.count3 = $('#C2').val();
-  gridDataObject.count4 = $('#D2').val();
-  gridDataObject.count5 = $('#E2').val();
+  gridDataObject.count1 = $('#A2').text();
+  gridDataObject.count2 = $('#B2').text();
+  gridDataObject.count3 = $('#C2').text();
+  gridDataObject.count4 = $('#D2').text();
+  gridDataObject.count5 = $('#E2').text();
 
-  gridDataObject.unit1 = $('#A3').val();
-  gridDataObject.unit2 = $('#B3').val();
-  gridDataObject.unit3 = $('#C3').val();
-  gridDataObject.unit4 = $('#D3').val();
-  gridDataObject.unit5 = $('#E3').val();
+  gridDataObject.unit1 = $('#A3').text();
+  gridDataObject.unit2 = $('#B3').text();
+  gridDataObject.unit3 = $('#C3').text();
+  gridDataObject.unit4 = $('#D3').text();
+  gridDataObject.unit5 = $('#E3').text();
 
-  gridDataObject.length1 = $('#A4').val();
-  gridDataObject.length2 = $('#B4').val();
-  gridDataObject.length3 = $('#C4').val();
-  gridDataObject.length4 = $('#D4').val();
-  gridDataObject.length5 = $('#E4').val();
+  gridDataObject.length1 = $('#A4').text();
+  gridDataObject.length2 = $('#B4').text();
+  gridDataObject.length3 = $('#C4').text();
+  gridDataObject.length4 = $('#D4').text();
+  gridDataObject.length5 = $('#E4').text();
 
-  gridDataObject.width1 = $('#A5').val();
-  gridDataObject.width2 = $('#B5').val();
-  gridDataObject.width3 = $('#C5').val();
-  gridDataObject.width4 = $('#D5').val();
-  gridDataObject.width5 = $('#E5').val();
+  gridDataObject.width1 = $('#A5').text();
+  gridDataObject.width2 = $('#B5').text();
+  gridDataObject.width3 = $('#C5').text();
+  gridDataObject.width4 = $('#D5').text();
+  gridDataObject.width5 = $('#E5').text();
 
-  gridDataObject.height1 = $('#A6').val();
-  gridDataObject.height2 = $('#B6').val();
-  gridDataObject.height3 = $('#C6').val();
-  gridDataObject.height4 = $('#D6').val();
-  gridDataObject.height5 = $('#E6').val();
+  gridDataObject.height1 = $('#A6').text();
+  gridDataObject.height2 = $('#B6').text();
+  gridDataObject.height3 = $('#C6').text();
+  gridDataObject.height4 = $('#D6').text();
+  gridDataObject.height5 = $('#E6').text();
 
-  gridDataObject.unitM1 = $('#A7').val();
-  gridDataObject.unitM2 = $('#B7').val();
-  gridDataObject.unitM3 = $('#C7').val();
-  gridDataObject.unitM4 = $('#D7').val();
-  gridDataObject.unitM5 = $('#E7').val();
+  gridDataObject.unitM1 = $('#A7').text();
+  gridDataObject.unitM2 = $('#B7').text();
+  gridDataObject.unitM3 = $('#C7').text();
+  gridDataObject.unitM4 = $('#D7').text();
+  gridDataObject.unitM5 = $('#E7').text();
 
-  gridDataObject.weight1 = $('#A8').val();
-  gridDataObject.weight2 = $('#B8').val();
-  gridDataObject.weight3 = $('#C8').val();
-  gridDataObject.weight4 = $('#D8').val();
-  gridDataObject.weight5 = $('#E8').val();
+  gridDataObject.weight1 = $('#A8').text();
+  gridDataObject.weight2 = $('#B8').text();
+  gridDataObject.weight3 = $('#C8').text();
+  gridDataObject.weight4 = $('#D8').text();
+  gridDataObject.weight5 = $('#E8').text();
 
-  gridDataObject.unitWt1 = $('#A9').val();
-  gridDataObject.unitWt2 = $('#B9').val();
-  gridDataObject.unitWt3 = $('#C9').val();
-  gridDataObject.unitWt4 = $('#D9').val();
-  gridDataObject.unitWt5 = $('#E9').val();
+  gridDataObject.unitWt1 = $('#A9').text();
+  gridDataObject.unitWt2 = $('#B9').text();
+  gridDataObject.unitWt3 = $('#C9').text();
+  gridDataObject.unitWt4 = $('#D9').text();
+  gridDataObject.unitWt5 = $('#E9').text();
 
   gridDataObject.cargoReadyDate = $('#cargoReadyDate').val();
   gridDataObject.cargoDueDate = $('#cargoDueDate').val();
@@ -113,12 +113,19 @@ function getGridFormData() {
 }
 
 function getQuoteFormData() {
-  quoteDataObject.twentyFourHrs = $('#24hrs').val();
-  quoteDataObject.standard = $('#standard').val();
-  quoteDataObject.oneHour = $('#1hour').val();
-  quoteDataObject.thirtyMin = $('#30minutes').val();
-  quoteDataObject.truck = $('#truck').val();
-  quoteDataObject.specialRequests = $('specialRequests').val();
+  quoteDataObject.twentyFourHrs= $('input[name=24hrs]:checked').val();
+  quoteDataObject.standard= $('input[name=standard]:checked').val();
+  quoteDataObject.oneHour= $('input[name=1hour]:checked').val();
+  quoteDataObject.thirtyMin= $('input[name=30minutes]:checked').val();
+
+  if ( $('#truck').is(':checked') ) {
+    quoteDataObject.truck = true;
+  }
+  else {
+    quoteDataObject.truck = false;
+  }
+
+  quoteDataObject.specialRequests = $('#specialRequests').val();
   console.log('quoteDataObject', quoteDataObject);
 
 }
