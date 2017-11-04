@@ -1,0 +1,82 @@
+.formContainer {
+  margin: 20px;
+  border-radius: 10px;
+}
+.formRow {
+  background-color: rgb(232, 232, 232);
+  border-radius: 10px;
+  margin: 20px;
+}
+/*.originContainer {
+  margin-top: 30px;
+  margin bottom: 15px;
+  margin-left: 7px;
+  margin-right: 7px;
+}*/
+/*.gridObjectContainer {
+  margin-top: 15px;
+  margin-left: 10px;
+}*/
+.cargoReadyContainer {
+  margin: 20px;
+  width: 200px;
+}
+.cargoDates {
+  margin-top: 20px;
+  margin-left: 2px;
+  background-color: lightblue;
+  width: 160px;
+}
+#cargoReadyDate {
+  width: 160px;
+}
+#cargoDueDate {
+  width: 160px;
+}
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+.quoteContainer {
+  background-color: rgb(232, 232, 232);
+  padding-bottom: 20px;
+}
+.quote {
+  margin-left: 20px;
+}
+.logo {
+  height: 200px;
+  width: 200px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.btn.btn-primary {
+  border: none;
+  margin: 5px;
+}
+#submitReqBtn {
+  background-color: green;
+}
+#cancelReqBtn {
+  background-color: red;
+}
+td, tr, th {
+    border: 2px solid white;
+    background-color: lightblue;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+}
+td, th {
+    min-width: 80px;
+    height: 50px;
+}
+td:hover {
+  background-color: yellow;
+}
+span {
+    width: 100%;
+    display: block;
+}
